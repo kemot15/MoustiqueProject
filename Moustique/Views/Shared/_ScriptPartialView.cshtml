@@ -1,0 +1,11 @@
+﻿<script>
+	$('.gallery_more').click(function(){
+		var $this = $(this);
+		$this.toggleClass('gallery_more');
+		if($this.hasClass('gallery_more')){
+			$this.text('Load More');
+		} else {
+			$this.text('Load Less');
+		}
+	});
+</script>
