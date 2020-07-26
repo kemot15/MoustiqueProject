@@ -1,45 +1,36 @@
 ﻿<!DOCTYPE html>
 <head>
     <title>Zwalcz komary</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--
-    Polygon Template
-    https://templatemo.com/tm-400-polygon
+    Strategy Template
+    http://www.templatemo.com/tm-489-strategy
     -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/templatemo_misc.css">
-    <link href="css/templatemo_style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
-
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/jquery.lightbox.js"></script>
-    <script src="js/templatemo_custom.js"></script>
-    <script>
-    function showhide()
-    {
-    	var div = document.getElementById("newpost");
-		if (div.style.display !== "none")
-		{
-			div.style.display = "none";
-		}
-		else {
-			div.style.display = "block";
-		}
-    }
-    </script>
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/hero-slider-style.css">                                  <!-- Hero slider style -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
 
 </head>
 <body>
-    @await Html.PartialAsync("_HeaderPartialView")
-
+    @*@await Html.PartialAsync("_HeaderPartialView")*@
+    
+    
     @RenderBody()
-    @await Html.PartialAsync("_FooterPartialView")
-    @*@await Html.PartialAsync("_ScriptPartialView")*@
+
+
+
+
+
+
+
+
+    @*@await Html.PartialAsync("_FooterPartialView")*@
+    @await Html.PartialAsync("_ScriptPartialView")
 </body>
 </html>

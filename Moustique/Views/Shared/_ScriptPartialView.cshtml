@@ -1,11 +1,53 @@
-﻿<script>
-	$('.gallery_more').click(function(){
-		var $this = $(this);
-		$this.toggleClass('gallery_more');
-		if($this.hasClass('gallery_more')){
-			$this.text('Load More');
-		} else {
-			$this.text('Load Less');
-		}
-	});
+﻿ <!-- load JS files -->
+<script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) -->
+<script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+<script src="js/hero-slider-script.js"></script>            <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+<script src="js/jquery.touchSwipe.min.js"></script>         <!-- http://labs.rampinteractive.co.uk/touchSwipe/demos/ -->
+<script>
+
+    $(document).ready(function () {
+
+        /* Auto play bootstrap carousel
+        * http://stackoverflow.com/questions/13525258/twitter-bootstrap-carousel-autoplay-on-load
+        -----------------------------------------------------------------------------------------*/
+        $('.carousel').carousel({
+            interval: 3000
+        })
+
+        /* Enable swiping carousel for tablets and mobile
+         * http://lazcreative.com/blog/adding-swipe-support-to-bootstrap-carousel-3-0/
+         ---------------------------------------------------------------------------------*/
+        if ($(window).width() <= 991) {
+            $(".carousel-inner").swipe({
+                //Generic swipe handler for all directions
+                swipeLeft: function (event, direction, distance, duration, fingerCount) {
+                    $(this).parent().carousel('next');
+                },
+                swipeRight: function () {
+                    $(this).parent().carousel('prev');
+                },
+                //Default is 75px, set to 0 for demo so any distance triggers swipe
+                threshold: 0
+            });
+        }
+
+        /* Handle window resize */
+        $(window).resize(function () {
+            if ($(window).width() <= 991) {
+                $(".carousel-inner").swipe({
+                    //Generic swipe handler for all directions
+                    swipeLeft: function (event, direction, distance, duration, fingerCount) {
+                        $(this).parent().carousel('next');
+                    },
+                    swipeRight: function () {
+                        $(this).parent().carousel('prev');
+                    },
+                    //Default is 75px, set to 0 for demo so any distance triggers swipe
+                    threshold: 0
+                });
+            }
+        });
+    });
+
 </script>

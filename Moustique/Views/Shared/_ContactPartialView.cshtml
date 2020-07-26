@@ -1,50 +1,59 @@
-﻿    <!-- contact start -->
-<div class="content contact" id="menu-5">
-    <div class="container">
+﻿@model Moustique.Models.ViewModels.EmailViewModel
+<!-- Contact section -->
+<section class="tm-bg-purple tm-section">
+    <div class="container-fluid tm-section-5-inner">
         <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="templatemo_contactmap">
-                    <div id="templatemo_map"></div>
-                    <img src="images/templatemo_contactiframe.png" alt="contact map">
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12 leftalign">
-                <div class="templatemo_contacttitle">Contact Information</div>
-                <div class="clear"></div>
-                <p>Integer eu neque sed mi fringilla pellentesque a eget leo. Duis ornare diam lorem, sit amet tempor mauris fringilla in. Etiam semper tempus augue, at vehicula metus. Nam vestibulum tortor nec congue ornare.</p>
-                <div class="templatemo_address">
-                    <ul>
-                        <li class="left fa fa-map-marker"></li>
-                        <li class="right">Nulla ut tellus, sit amet urna, <br>scelerisque pretium 10960</li>
-                        <li class="clear"></li>
-                        <li class="left fa fa-phone"></li>
-                        <li class="right">010-020-0770</li>
-                        <li class="clear"></li>
-                        <li class="left fa fa-envelope"></li>
-                        <li class="right">info@company.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-5 col-sm-12">
-                <form role="form">
-                    <div class="templatemo_form">
-                        <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Your Name" maxlength="40">
-                    </div>
-                    <div class="templatemo_form">
-                        <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" maxlength="40">
-                    </div>
-                    <div class="templatemo_form">
-                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" maxlength="40">
-                    </div>
-                    <div class="templatemo_form">
-                        <textarea name="message" rows="10" class="form-control" id="message" placeholder="Message"></textarea>
-                    </div>
-                    <div class="templatemo_form"><button type="button" class="btn btn-primary">Send Message</button></div>
-                </form>
+            <div class="col-xs-12 tm-text-white text-xs-center">
+                <h2 class="tm-section-3-title">Contact Us</h2>
+                <p class="tm-section-3-description">Curabitur porta scelerisque justo, ut ultrices lacus auctor eget. Proin volutpat eu mi nec consequat. Integer porta tristique quam.</p>
             </div>
         </div>
+        <div class="row">
+            <form asp-action="SendEmail" method="post" class="tm-contact-form">
 
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Imię" required />
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Email" type="email" class="form-control" placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Phone" type="text" class="form-control" placeholder="Telefon"  />
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <textarea asp-for="Message" class="form-control" rows="6" placeholder="Your message" required></textarea>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <button type="submit" class="cd-btn pull-xs-right">Send it</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
+                <div class="tm-social-icons-container">
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-facebook tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-google-plus tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-twitter tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-behance tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-linkedin tm-social-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="col-xs-12 text-xs-center">
+                <p class="tm-text-white tm-copyright-text">
+                    Copyright &copy; 2016 Your Company
+
+                    | Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a>
+                </p>
+            </footer>
+        </div>
     </div>
-</div>
-    </div>
-<!-- contact end -->
+</section>

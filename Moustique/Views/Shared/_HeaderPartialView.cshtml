@@ -1,52 +1,70 @@
-﻿<div class="site-header">
-    <div class="main-navigation">
-        <div class="responsive_menu">
-            <ul>
-                <li><a class="show-1 templatemo_home" href="#">Gallery</a></li>
-                <li><a class="show-2 templatemo_page2" href="#">Our team</a></li>
-                <li><a class="show-3 templatemo_page3" asp-action="Service">Services</a></li>
-                <li><a class="show-5 templatemo_page5" href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="container">
-            <div class="row templatemo_gallerygap">
-                <div class="col-md-12 responsive-menu">
-                    <a href="#" class="menu-toggle-btn">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div> <!-- /.col-md-12 -->
-                <div class="col-md-3 col-sm-12">
-                    <a href="#"><img src="images/templatemo_logo.jpg" alt="Polygon HTML5 Template"></a>
+﻿<section class="cd-hero">
+    <ul class="cd-hero-slider autoplay">
+        <!--
+            <ul class="cd-hero-slider autoplay"> for slider auto play
+            <ul class="cd-hero-slider"> for disabled auto play
+        -->
+        <li class="selected">
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div">
+                    <form action="index.html" id="search-form">
+                        <i class="fa fa-cogs tm-slide-icon"></i>
+                        <h2 class="text-uppercase">Strategy</h2>
+                        <p class="m-b-mid">Another Bootstrap 4.0 Website Template</p>
+                        @*<div class="form-group">
+                            <input name="search" type="text" class="form-control center-block tm-max-w-400" id="input1" placeholder="Type a keyword...">
+                        </div>*@
+                        <button type="submit" class="cd-btn">Cennik</button>
+
+                    </form>
                 </div>
-                <div class="col-md-9 main_menu">
-                    <ul>
-                        <li>
-                            <a class="show-1 templatemo_home" href="#">
-                                <span class="fa fa-camera"></span>
-                                Gallery
-                            </a>
-                        </li>
-                        <li>
-                            <a class="show-2 templatemo_page2" href="#">
-                                <span class="fa fa-users"></span>
-                                Our team
-                            </a>
-                        </li>
-                        <li>
-                            <a class="show-3 templatemo_page3" asp-action="Service">
-                                <span class="fa fa-cogs"></span>
-                                Services
-                            </a>
-                        </li>
-                        <li>
-                            <a class="show-5 templatemo_page5" href="#">
-                                <span class="fa fa-envelope"></span>
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div> <!-- /.col-md-12 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /.main-navigation -->
-</div> <!-- /.site-header -->
+            </div> <!-- .cd-full-width -->
+        </li>
+
+        <li>
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div">
+                    <form action="index.html">
+                        <i class="fa fa-compass tm-slide-icon"></i>
+                        <h2 class="text-uppercase">Strategy</h2>
+                        <p>
+                            Using Hero Slider from Cody House. Donec mattis ipsum in erat viverra commodo.
+                            Proin sapien lacus, euismod eget nisl.
+                        </p>
+                        <a href="index.html#1" class="cd-btn">Explore</a>
+
+                    </form>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+
+        <li>
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div">
+                    <form action="index.html" id="newsletter">
+                        <i class="fa fa-cloud tm-slide-icon"></i>
+                        <h2 class="text-uppercase">Strategy</h2>
+                        <p class="tm-site-description">Photos from Unsplash</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control center-block tm-max-w-400" id="input3" placeholder="Enter your email...">
+                        </div>
+                        <button type="submit" class="cd-btn">Sign Up</button>
+
+                    </form>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+    </ul> <!-- .cd-hero-slider -->
+
+    <div class="cd-slider-nav">
+        <nav>
+            <span class="cd-marker item-1"></span>
+
+            <ul>
+                <li class="selected"><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+                <li><a href="#0"></a></li>
+            </ul>
+        </nav>
+    </div> <!-- .cd-slider-nav -->
+</section> <!-- .cd-hero -->
