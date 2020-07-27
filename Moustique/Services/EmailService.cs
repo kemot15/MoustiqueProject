@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Moustique.Models.ViewModels;
+using Moustique.Services.Interfaces;
 using System;
 using System.Net;
 using System.Net.Mail;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Moustique.Services
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
-        public static async Task<bool> SendEmailAsync(EmailViewModel model)
+        public async Task<bool> SendEmailAsync(EmailViewModel model)
         {
             try
             {

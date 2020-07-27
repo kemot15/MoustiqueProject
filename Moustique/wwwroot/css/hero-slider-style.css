@@ -14,10 +14,11 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #2c343b;
-  background-color: #f2f2f2;
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    color: #2c343b;
+    /*background-color: #f2f2f2;*/
+    background-color: #2c2d2f;
 }
 
 a {
@@ -193,7 +194,7 @@ Slider
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider {
-    height: 500px;
+  /*  height: 500px;*/
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -301,8 +302,8 @@ Single slide style
   line-height: 1.2;
   margin: 0 auto 14px;
   color: #ffffff;
-  width: 90%;
-  max-width: 400px;
+ /* width: 90%;*/
+ /* max-width: 400px;*/
 }
 .cd-hero-slider h2 {
   font-size: 2.4rem;

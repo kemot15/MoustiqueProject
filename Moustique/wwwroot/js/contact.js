@@ -52,7 +52,7 @@ document.addEventListener('submit', function (event) {
 
 
 function showResult(result) {
-    console.log(result);
+    
     if (result) {
         emailButton.disabled = true;
         name.value = "";
@@ -63,10 +63,11 @@ function showResult(result) {
         email.disabled = true;
         message.value = "";
         message.disabled = true;
-        emailButton.value = "Wysłano";
+        emailButton.innerText = "Wysłano";
+        emailButton.disabled = true;
         alert("Wysłano wiadomość");
     }
     else {
         alert("Wiadomość nie została wysłana");
     }
-}0000000000000
+}

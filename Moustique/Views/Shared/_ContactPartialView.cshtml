@@ -25,12 +25,12 @@
 
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="form-group">
-                        <textarea asp-for="Message" class="form-control" rows="6" placeholder="Your message" required></textarea>
+                        <textarea asp-for="Message" class="form-control" rows="6" placeholder="Twoja wiadomość" required></textarea>
                     </div>
                 </div>
 
                 <div class="col-xs-12">
-                    <button type="submit" class="cd-btn pull-xs-right">Send it</button>
+                    <button type="submit" id="email-button" class="cd-btn pull-xs-right">Wyślij</button>
                 </div>
             </form>
         </div>
@@ -57,3 +57,4 @@
         </div>
     </div>
 </section>
+<script src="~/js/contact.js"></script>
