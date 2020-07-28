@@ -46,8 +46,6 @@ document.addEventListener('submit', function (event) {
     else {
         alert("Wiadomość nie została wysłana");
     }
-
-
 })
 
 

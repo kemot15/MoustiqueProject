@@ -4,11 +4,20 @@
     <div class="container-fluid tm-section-5-inner">
         <div class="row">
             <div class="col-xs-12 tm-text-white text-xs-center">
-                <h2 class="tm-section-3-title">Contact Us</h2>
-                <p class="tm-section-3-description">Curabitur porta scelerisque justo, ut ultrices lacus auctor eget. Proin volutpat eu mi nec consequat. Integer porta tristique quam.</p>
+                <h2 class="tm-section-3-title">Zapraszamy do kontaktu</h2>
+                <p class="tm-section-3-description">Wyślij zapytanie, postaramy się udzielić odpowiedzi w możliwie krótkim czasie.</p>
+                <div class="tm-text-white text-xs-center">
+                    <ul>
+                        <li class="right fa fa-phone"><a href="tel:010-020-0770"> 010-020-0770</a></li>
+                        <li class="clear"></li>
+                        <li class="left fa fa-envelope"><a href="mailto:biuro@polowanienakomary.pl"> biuro@polowanienakomary.pl</a></li>
+                        <li class="clear"></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="row">
+        
+        <div class="row">            
             <form asp-action="SendEmail" method="post" class="tm-contact-form">
 
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -19,7 +28,7 @@
                         <input asp-for="Email" type="email" class="form-control" placeholder="Email" required />
                     </div>
                     <div class="form-group">
-                        <input asp-for="Phone" type="text" class="form-control" placeholder="Telefon"  />
+                        <input asp-for="Phone" type="text" class="form-control" placeholder="Telefon" />
                     </div>
                 </div>
 
@@ -49,7 +58,7 @@
         <div class="row">
             <footer class="col-xs-12 text-xs-center">
                 <p class="tm-text-white tm-copyright-text">
-                    Copyright &copy; 2016 Your Company
+                    Copyright &copy; @DateTime.Now.Year <a href="http://www.tmarciniak.com.pl" target="_blank">Tomasz Marciniak</a>
 
                     | Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a>
                 </p>

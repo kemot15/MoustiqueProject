@@ -14,7 +14,7 @@ ul { padding: 0; margin: 0;}
 }
 html { font-size: 100%; }
 body {
-	background-color: white;
+	background-color: #393e42;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 19px;
 	font-weight: 300;
@@ -27,6 +27,102 @@ a:focus {
 	text-decoration: none;
 	outline: none;
 }
+
+
+
+
+.title {
+	padding-top: 250px;
+	padding-left: 50px;
+	
+}
+
+.gallery-item {
+	background-color: white;
+	-webkit-box-shadow: inset 0 0 1px #666;
+	-moz-box-shadow: inset 0 0 1px #666;
+	margin-bottom: 30px;
+	/* position: relative; */
+	overflow: hidden;
+}
+
+
+
+
+@media (min-width: 768px) .container {
+	width: 750px;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+
+
+
+
+.hexagon {
+	overflow: hidden;
+	visibility: hidden;
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	transform: rotate(120deg);
+	cursor: pointer;
+}
+
+.hexagonteam {
+	position: absolute;
+	width: 200px;
+	height: 350px;
+	top: -85px;
+}
+
+.hexagon-in1 {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+.hexagon-in2 {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	-webkit-background-size: 125%;
+	-moz-background-size: 125%;
+	background-size: 125%;
+	visibility: visible;
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+
+element.style {
+	background-image: url(images/team/1.jpg);
+}
+
 
 /* Hero slider */
 .cd-hero-slider { height: 480px; }
@@ -212,7 +308,9 @@ a:focus {
 .tm-gray-text { color: #666666; }
 .tm-gray-text-2 { color: #656565; }
 
-.tm-bg-purple { background-color: #3F3F67; }
+.tm-bg-purple {
+	background-color: #2c2d2f;
+}
 .tm-bg-light-purple { background-color: #C4C4DB; }
 .tm-bg-light-green { background-color: #C6D9C8; }
 .tm-bg-light-orange { background-color: #DDD3C1; }

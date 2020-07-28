@@ -34,7 +34,7 @@ namespace Moustique.Controllers
             {
                 email.IsHtml = true;
                 email.Subject = "Wiadomość ze strony Polowanie Na Komary - formularz kontaktowy";
-                email.Body = $"<h1>Od: {email.Name}</h1>{Environment.NewLine}<h2>E-mail: {email.Email} </h2>{Environment.NewLine}<div>Wiadomość: {email.Message}</div>";
+                email.Body = $"<h1>Od: {email.Name}</h1>{Environment.NewLine}<h2>E-mail: {email.Email} </h2>{Environment.NewLine}<div>Telefon: {email.Phone} </h2>{Environment.NewLine}<div>Wiadomość: {email.Message}</div>";
 
 
                 //info = "Wiadomość została wysłana";
