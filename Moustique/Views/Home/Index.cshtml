@@ -1,21 +1,41 @@
 ﻿@{
-    Layout = "_LayoutDiagona";
+    ViewBag.Title = "Home";
 }
 <div class="tm-row">
     <div class="tm-col-left"></div>
     <main class="tm-col-right">
         <section class="tm-content">
             <h1 class="mb-5 tm-content-title">Dzięki nam</h1>
-            <p class="mb-5">Zadbasz o spokój dla siebie i najbliższych w swoim domowym otoczeniu. Skorzystasz w pełni ze swojego ogrodu. Niech dzieci beztrosko bawią sią na placu zabaw, w przedszkolu i na boisku, a Ty w końcu rozpalisz grilla i zaprosisz znajomych.</p>
-            <hr class="mb-5">
-            <p class="mb-5">
-                <b>Zaproście nas na polowanie </b>, a komary i kleszcze będą tylko niemiłym wspomnieniem.
-            </p>
+            <hr class="mb-4">
+            <div class="media my-3">
+                <div class="media-body">
+                    <p class="mb-5">Zadbasz o spokój dla siebie i najbliższych w swoim domowym otoczeniu. Skorzystasz w pełni ze swojego ogrodu. Niech dzieci beztrosko bawią sią na placu zabaw, w przedszkolu i na boisku, a Ty w końcu rozpalisz grilla i zaprosisz znajomych.</p>
+                </div>
+            </div>
+            @*<a asp-action="About" class="btn btn-primary">O nas...</a>*@
+        </section>
+        <section class="tm-content">
+            <h1 class="mb-5 tm-content-title">Zaproście nas na polowanie</h1>
+            <hr class="mb-4">
+            <div class="media my-3">
+                <div class="media-body">
+                    <p class="mb-5">Komary i kleszcze będą tylko niemiłym wspomnieniem.</p>
+                </div>
+            </div>
+            @*<a asp-action="About" class="btn btn-primary">O nas...</a>*@
+        </section>
+        <section class="tm-content">
+            <h1 class="mb-5 tm-content-title">Obszar działania</h1>
+            <hr class="mb-4">
+            <div class="media my-3">
+                <div class="media-body">
+                    <p class="mb-5">Wrocław i okolice.</p>
+                </div>
+            </div>
             @*<a asp-action="About" class="btn btn-primary">O nas...</a>*@
         </section>
     </main>
 </div>
-
 
 @*@await Html.PartialAsync("_AboutPartialView")
     @await Html.PartialAsync("_ServicePartialView")
