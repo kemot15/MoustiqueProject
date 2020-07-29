@@ -13,8 +13,6 @@ function isFormValid() {
 console.log(emailButton);
 document.addEventListener('submit', function (event) {
     event.preventDefault();
-    console.log(name.value);
-    console.log(message.value);
 
     if (isFormValid()) {
         fetch("Home/SendEmail", {

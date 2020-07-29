@@ -1,0 +1,38 @@
+﻿@model Moustique.Models.ViewModels.EmailViewModel
+@{
+    Layout = "_LayoutDiagona";
+}
+<div class="tm-row">
+    <div class="tm-col-left"></div>
+    <main class="tm-col-right tm-contact-main">
+        <!-- Content -->
+        <section class="tm-content tm-contact">
+            <h2 class="mb-4 tm-content-title">Kontakt</h2>  
+            <div class="form-group mb-4">
+                Numer telefonu: <a href="tel:010-020-0770"> 010-020-0770</a>
+                </div>
+            <div class="form-group mb-4">
+                E-mail: <a href="mailto:biuro@polowanienakomary.pl"> biuro@polowanienakomary.pl</a>
+                </div>
+                </ul>
+                <form asp-action="SendEmail" method="POST">
+                    <div class="form-group mb-4">
+                        <input asp-for="Name" type="text" class="form-control" placeholder="Imię" required="" />
+                    </div>
+                    <div class="form-group mb-4">
+                        <input asp-for="Email" type="email" class="form-control" placeholder="E-mail" required="" />
+                    </div>
+                    <div class="form-group mb-4">
+                        <input asp-for="Phone" type="number" class="form-control" placeholder="Numer telefonu" required="" />
+                    </div>
+                    <div class="form-group mb-5">
+                        <textarea asp-for="Message" rows="6"  class="form-control" placeholder="Wiadomość..." required=""></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-big btn-primary" id="email-button">Wyślij</button>
+                    </div>
+                </form>
+</section>
+    </main>
+</div>
+<script src="~/js/contact.js"></script>

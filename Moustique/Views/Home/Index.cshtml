@@ -1,8 +1,23 @@
 ﻿@{
-    Layout = "_Layout";
+    Layout = "_LayoutDiagona";
 }
-@await Html.PartialAsync("_HeaderPartialView")
-@await Html.PartialAsync("_AboutPartialView")
-@await Html.PartialAsync("_ServicePartialView")
-@await Html.PartialAsync("_ContactPartialView")
+<div class="tm-row">
+    <div class="tm-col-left"></div>
+    <main class="tm-col-right">
+        <section class="tm-content">
+            <h1 class="mb-5 tm-content-title">Dzięki nam</h1>
+            <p class="mb-5">Zadbasz o spokój dla siebie i najbliższych w swoim domowym otoczeniu. Skorzystasz w pełni ze swojego ogrodu. Niech dzieci beztrosko bawią sią na placu zabaw, w przedszkolu i na boisku, a Ty w końcu rozpalisz grilla i zaprosisz znajomych.</p>
+            <hr class="mb-5">
+            <p class="mb-5">
+                <b>Zaproście nas na polowanie </b>, a komary i kleszcze będą tylko niemiłym wspomnieniem.
+            </p>
+            @*<a asp-action="About" class="btn btn-primary">O nas...</a>*@
+        </section>
+    </main>
+</div>
+
+
+@*@await Html.PartialAsync("_AboutPartialView")
+    @await Html.PartialAsync("_ServicePartialView")
+    @await Html.PartialAsync("_ContactPartialView")*@
 @*@await Html.PartialAsync("_EmailModalPartialView")*@

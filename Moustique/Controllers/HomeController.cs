@@ -27,6 +27,15 @@ namespace Moustique.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         public async Task<IActionResult> SendEmail([FromBody] EmailViewModel email)
         {
