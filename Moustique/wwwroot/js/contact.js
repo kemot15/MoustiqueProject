@@ -15,7 +15,7 @@ document.addEventListener('submit', function (event) {
     event.preventDefault();
 
     if (isFormValid()) {
-        fetch("Home/SendEmail", {
+        fetch("SendEmail", {
             method: 'POST',
             headers: { 'Content-Type': "application/json" },
             body: JSON.stringify({ Name: name.value, Email: email.value, Phone: parseInt(phone.value), Message: message.value })
