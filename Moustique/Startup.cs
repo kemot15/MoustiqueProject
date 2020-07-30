@@ -15,6 +15,7 @@ namespace Moustique
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IEmailService, EmailService>();
+            services.AddScoped<IIPAddressService, IPAddressService>();
             services.AddControllersWithViews();
         }
 
