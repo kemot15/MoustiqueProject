@@ -20,6 +20,14 @@ namespace Moustique.Controllers
 
         public IActionResult Index()
         {
+            var remoteIpAddress = Request.HttpContext.Connection.RemoteIpAddress;
+            var email = new EmailViewModel
+            {
+                IsHtml = true,
+                Subject = "Wiadomość ze strony PNK - wejście na stronę",
+                Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
+            };
+            _emailService.SendEmailAsync(email);
             return View();
         }
 
