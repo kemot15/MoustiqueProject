@@ -15,7 +15,7 @@ namespace Moustique
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IEmailService, EmailService>();
-            services.AddScoped<IIPAddressService, IPAddressService>();
+            services.AddScoped<IAddressService, AddressService>();
             services.AddControllersWithViews();
         }
 
@@ -25,6 +25,10 @@ namespace Moustique
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/About");
             }
 
             app.UseStaticFiles();

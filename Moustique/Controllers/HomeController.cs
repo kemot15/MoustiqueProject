@@ -10,9 +10,9 @@ namespace Moustique.Controllers
     public class HomeController : Controller
     {
         private readonly IEmailService _emailService;
-        private readonly IIPAddressService _iPAddressService;
+        private readonly IAddressService _iPAddressService;
 
-        public HomeController(IEmailService emailService, IIPAddressService iPAddressService)
+        public HomeController(IEmailService emailService, IAddressService iPAddressService)
         {
             _emailService = emailService;
             _iPAddressService = iPAddressService;
@@ -21,26 +21,36 @@ namespace Moustique.Controllers
         public IActionResult Index()
         {
             var remoteIpAddress = Request.HttpContext.Connection.RemoteIpAddress;
-            var IPinfo = _iPAddressService.ShowInfo(remoteIpAddress.ToString());
-            if (IPinfo.ip == null)
-            {
-                var emailNoIp = new EmailViewModel
-                {
-                    IsHtml = true,
-                    Subject = "Wiadomość ze strony PNK - wejście na stronę",
-                    Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
-                };
-                _emailService.SendEmailAsync(emailNoIp);
-                return View();
-            }
-            
-            var email = new EmailViewModel
+            //var IPinfo = _iPAddressService.ShowInfo(remoteIpAddress.ToString());
+            //if (IPinfo.ip == null)
+            //{
+            //    var emailNoIp = new EmailViewModel
+            //    {
+            //        IsHtml = true,
+            //        Subject = "Wiadomość ze strony PNK - wejście na stronę",
+            //        Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
+            //    };
+            //    _emailService.SendEmailAsync(emailNoIp);
+            //    return View();
+            //}
+
+            //var email = new EmailViewModel
+            //{
+            //    IsHtml = true,
+            //    Subject = "Wiadomość ze strony PNK - wejście na stronę",
+            //    Body = $"Wejscie na stronę IP: {remoteIpAddress}<br />Miasto: {IPinfo.city}<br />Państwo: {IPinfo.country_name}<br />Lokalizacja: {IPinfo.location.capital} <br />Kod: {IPinfo.zip}"
+            //};
+            //_emailService.SendEmailAsync(email);
+
+
+            var emailNoIp = new EmailViewModel
             {
                 IsHtml = true,
                 Subject = "Wiadomość ze strony PNK - wejście na stronę",
-                Body = $"Wejscie na stronę IP: {remoteIpAddress}<br />Miasto: {IPinfo.city}<br />Państwo: {IPinfo.country_name}<br />Lokalizacja: {IPinfo.location.capital} <br />Kod: {IPinfo.zip}"
+                Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
             };
-            _emailService.SendEmailAsync(email);
+            _emailService.SendEmailAsync(emailNoIp);
+
             return View();
         }
 

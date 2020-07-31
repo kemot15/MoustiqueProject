@@ -1,18 +1,17 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Moustique.Models.ViewModels;
 using Moustique.Services.Interfaces;
 using Nancy.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using static Moustique.Models.ViewModels.InfoAddress;
+
 using System.Net;
-using System.Threading.Tasks;
+using Moustique.Models.ViewModels;
 
 namespace Moustique.Services
 {
-    public class IPAddressService : IIPAddressService
+    public class AddressService : IAddressService
     {
-        public Models.ViewModels.IPAddress.Rootobject ShowInfo (string IP)
+        public Rootobject ShowInfo (string IP)
         {
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.AddJsonFile("appsettings.json", true);
@@ -29,10 +28,11 @@ namespace Moustique.Services
             }
             catch (Exception)
             {
-                //ViewBag.Info = "Miejscowość nie została odnaleziona";
-                //return Index("Wrocław");
+                var alterResult = new Rootobject() { ip = null };
+                return alterResult;
             }
-            var result = (new JavaScriptSerializer()).Deserialize<Models.ViewModels.IPAddress.Rootobject>(json);
+            var result = (new JavaScriptSerializer()).Deserialize<InfoAddress.Rootobject>(json);
+                        
             return result;
         }
 

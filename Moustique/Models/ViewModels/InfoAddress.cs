@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+﻿
 namespace Moustique.Models.ViewModels
 {
-    public class IPAddress
+    public class InfoAddress
     {
 
         public class Rootobject
