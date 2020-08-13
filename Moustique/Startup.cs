@@ -33,6 +33,9 @@ namespace Moustique
             services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<MoustiqueContext>();
             services.AddSingleton<IEmailService, EmailService>();
             services.AddScoped<IAddressService, AddressService>();
+
+            services.AddScoped<ILoggerService, LoggerService>();
+
             services.AddControllersWithViews();
         }
 

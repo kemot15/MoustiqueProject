@@ -23,5 +23,7 @@ namespace Moustique.Context
                 new IdentityRole<int> { Id = 2, Name = "User", NormalizedName = "USER" });
             base.OnModelCreating(builder);
         }
+
+        public DbSet<Statistics> Statistics { get; set; }
     }
 }
