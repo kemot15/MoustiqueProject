@@ -40,7 +40,7 @@ namespace Moustique.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Dashboard");
+                    return RedirectToAction("VisitReport", "Admin");
                 }
                 //if (result.IsLockedOut)
                 //{

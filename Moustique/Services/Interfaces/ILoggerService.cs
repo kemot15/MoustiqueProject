@@ -9,5 +9,6 @@ namespace Moustique.Services.Interfaces
     public interface ILoggerService
     {
         Task<bool> SaveIpAddressAsync(Statistics statistics);
+        Task<IList<Statistics>> GetVisitsStatisticsAsync();
     }
 }

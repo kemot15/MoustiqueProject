@@ -1,4 +1,5 @@
-﻿using Moustique.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Moustique.Context;
 using Moustique.Models.Db;
 using Moustique.Services.Interfaces;
 using System;
@@ -16,6 +17,11 @@ namespace Moustique.Services
         public LoggerService(MoustiqueContext context)
         {
             _context = context;
+        }
+
+        public async Task<IList<Statistics>> GetVisitsStatisticsAsync()
+        {
+            return await _context.Statistics.ToListAsync();
         }
 
         public async Task<bool> SaveIpAddressAsync (Statistics statistics)
