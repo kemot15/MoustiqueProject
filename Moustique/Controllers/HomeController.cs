@@ -49,7 +49,7 @@ namespace Moustique.Controllers
                 Subject = "Wiadomość ze strony PNK - wejście na stronę",
                 Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
             };
-            _emailService.SendEmailAsync(emailNoIp);
+           // _emailService.SendEmailAsync(emailNoIp);
 
             return View();
         }
