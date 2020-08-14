@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Moustique.Models.Db.Statistics>
 
-@{
-    Layout = null;
+@*@{
+    Layout = "_AppLayout";
 }
 
 <!DOCTYPE html>
@@ -12,50 +12,127 @@
     <title>VisitReport</title>
 </head>
 <body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AddressIP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Page)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AddressIP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Page)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddressIP)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Page)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddressIP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Page)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
+
+@model IList<Charity.Mvc.Models.Db.Institution>*@
+@{
+    Layout = "_AppLayout";
+}
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Instytucje</h1>
+    <p class="mb-4">Zbiór instutucji.</p>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Wszystkie instytucje</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Id)</th>
+                            <th>@Html.DisplayNameFor(model => model.DateTime)</th>
+                            <th>@Html.DisplayNameFor(model => model.AddressIP)</th>
+                            <th>@Html.DisplayNameFor(model => model.Page)</th>
+                            <th>Usuń</th>
+                        </tr>
+                    </thead>
+                    @*<tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>*@
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateTime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AddressIP)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Page)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+                    @*@foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td><a class="btn btn-info btn-circle" asp-action="AddEdit" asp-controller="Institution" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a></td>
+                            <td><a class="btn btn-danger btn-circle" asp-action="Delete" asp-controller="Institution" asp-route-id="@item.Id" onclick="return confirm('Czy na pewno chesz usunąć instytucję?')"></a><i class="fas fa-trash"></i></td>
+                        </tr>
+                    }*@
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
