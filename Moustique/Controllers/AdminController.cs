@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Moustique.Services.Interfaces;
 
@@ -18,6 +19,7 @@ namespace Moustique.Controllers
             return View();
         }
 
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> VisitReport()
         {
 
