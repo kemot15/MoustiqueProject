@@ -19,7 +19,7 @@ namespace Moustique.Controllers
             return View();
         }
 
-        [Authorize(Roles ="Admin")]
+        [Authorize]
         public async Task<IActionResult> VisitReport()
         {
 

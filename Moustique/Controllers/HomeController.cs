@@ -55,7 +55,7 @@ namespace Moustique.Controllers
                 Body = $"Wejscie na stronę {Environment.NewLine}IP: {remoteIpAddress}"
             };
             await SaveStatsAsync(remoteIpAddress, Pages.Home);
-            //_emailService.SendEmailAsync(emailNoIp);
+            _emailService.SendEmailAsync(emailNoIp);
 
             return View();
         }
